@@ -1,0 +1,29 @@
+@if (product) {
+
+
+<div class="product">
+  <div class="avatar-name">
+    <img [src]="product.avatarUrl | imgUrl"
+         [alt]="product.productName"
+         class="product__avatar">
+
+    <div class="product_name">
+      <strong>{{product.productName}}</strong>
+    </div>
+    <div class="product_status">
+      <span>{{product.productStatus}}</span>
+    </div>
+  </div>
+
+  <!-- Опис під avatar-name -->
+  <div class="product__description">
+    <p>{{product.productDescription}}</p>
+  </div>
+
+  <div class="product__price">
+    <span>{{product.price}}</span>
+  </div>
+</div>
+} @else {
+  <p>Product not found</p>
+}

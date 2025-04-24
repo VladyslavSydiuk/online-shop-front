@@ -1,0 +1,87 @@
+/* Контейнер для всіх товарів */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px;
+}
+
+/* Кожен товар */
+.product {
+  flex: 1 1 250px; /* гнучка ширина, мінімум 250px */
+  max-width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Підняття при ховері */
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Картинка */
+.product__avatar {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Назва товару */
+.product_name {
+  padding: 10px;
+  text-align: center;
+}
+
+.product_name strong {
+  font-size: 18px;
+  color: #333;
+}
+
+.product_name span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Опис */
+.product__description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  color: #000000;
+  padding: 16px;
+  transform: translateY(100%); /* Hidden below the card */
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.product:hover .product__description {
+  transform: translateY(0); /* Slide up on hover */
+}
+
+.product__description p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Ціна */
+.product__price {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  border-radius: 0 0 12px 12px;
+}
