@@ -1,0 +1,27 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 32px;
+}
+
+/* Твої продукти повинні мати обмеження по ширині */
+app-product, .product {
+  flex: 1 1 calc(25% - 24px);
+  max-width: 300px;
+  min-width: 250px;
+}
+
+/* Адаптивність */
+@media (max-width: 1000px) {
+  app-product {
+    flex: 1 1 calc(50% - 24px);
+  }
+}
+
+@media (max-width: 600px) {
+  app-product {
+    flex: 1 1 100%;
+  }
+}
