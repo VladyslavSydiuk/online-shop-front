@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: Inter, 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #3890fd !important;
+  margin: 0;
+}
+
+.search-field {
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.search-field .mat-form-field-wrapper {
+  padding: 0 12px;
+}
+
+.search-field .mat-form-field-outline {
+  border-radius: 12px;
+}
+
+.search-field .mat-form-field-flex {
+  background: #f5f7fa;
+  transition: box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.search-field .mat-form-field-flex:hover,
+.search-field .mat-form-field-flex.mat-focused {
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+.search-field input.mat-input-element {
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.search-field .mat-form-field-label {
+  font-size: 0.9rem;
+  color: #607d8b;
+}
+
+.search-field .mat-focused .mat-form-field-label {
+  color: #2196f3;
+}

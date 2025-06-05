@@ -1,17 +1,20 @@
-import {Component, inject} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {ProductComponent} from "./component/product/product.component";
-import {ProductService} from "./data/service/product/product.service";
-import {Product} from "./data/interfaces/product.interface";
+import {Component, inject, OnInit} from '@angular/core';
+import {Router, RouterOutlet} from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProductComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'online-shop-front';
+  private router = inject(Router)
+
+  ngOnInit(): void {
+    this.router.navigate(['/main']);
+  }
 
 }

@@ -1,7 +1,19 @@
+<div>
+<div>
+  <div class="max-w-md mx-auto">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ваш email</label>
+    <input (change)="search($event)" type="email" id="email"
+           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-lime-500 focus:border-lime-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+           placeholder="name@email.com" required>
+  </div>
+
+</div>
 <div class="product-list">
+
   @for (product of products; track product.id) {
     <app-product [product]="product">
 
     </app-product>
   }
+</div>
 </div>
